@@ -24,6 +24,7 @@ public class Calendar {
 	public static void main(String[] args) {
 
 		// 숫자를 입력받아 해당하는 달의 최대 일수를 출력하는 프로그램
+		String PROMPT = "cal> ";
 		Scanner scanner = new Scanner(System.in);
 		Calendar cal = new Calendar();
 		System.out.println("반복횟수를 입력하세요");
@@ -31,16 +32,33 @@ public class Calendar {
 		
 
 
-		for (int i=0; i < repeat; i++) {
-			System.out.println("달을 입력하세요");
-			int month = scanner.nextInt();
-			System.out.printf("%d월은 %d일까지 있습니다.\n", month, cal.getMaxDaysOfMonth(month));
-		}
-		System.out.println("END.");
+//		for (int i=0; i < repeat; i++) {
+//			System.out.println("달을 입력하세요");
+//			System.out.print(PROMPT);
+//			int month = scanner.nextInt();
+//			System.out.printf("%d월은 %d일까지 있습니다.\n", month, cal.getMaxDaysOfMonth(month));
+//		}
+//		System.out.println("END.");
+//		
+		//while(true)는 무한루프
+		int month;
 		
-
-		cal.printSampleCalendar();
-
+		while(true) {
+			System.out.println("달을 입력하세요");
+			System.out.print(PROMPT);
+			month = scanner.nextInt();			
+			
+			if (month <1) { 
+				System.out.println("숫자가 1보다 작으면 반복이 종료됩니다. ");
+				break;}
+			// break를 만나면 반복이 종료된다.
+			if (month > 12) {
+				System.out.println("12이하의 숫자만 입력하세요. ");
+				continue;}
+			// continue는 처음으로 되돌아간다.
+			System.out.printf("%d월은 %d일까지 있습니다.\n", month, cal.getMaxDaysOfMonth(month));
+			
+		}
 		scanner.close();
 	}
 }
