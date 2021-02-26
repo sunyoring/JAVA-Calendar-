@@ -25,7 +25,8 @@ public class Prompt {
 				System.out.println("12 이하의 숫자만 입력하세요. ");
 				continue; 			// continue는 처음으로 되돌아간다.		
 			}
-				cal.printCalendar(2020, month);
+				cal.printCalendar(2021, month);
+				System.out.println();
 				System.out.println();
 				System.out.println();
 
