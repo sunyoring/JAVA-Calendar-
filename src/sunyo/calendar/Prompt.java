@@ -4,16 +4,20 @@ import java.util.Scanner;
 
 public class Prompt {
 
-	private final static String PROMPT = "cal > ";
+
 
 	public void runPrompt() {
 		Scanner scanner = new Scanner(System.in);
 		Calendar cal = new Calendar();
 
 		int month;
+		int year;
 		while (true) {
+			System.out.println("년도를 입력하세요");
+			System.out.print("YEAR > ");
+			year = scanner.nextInt();
 			System.out.println("달을 입력하세요");
-			System.out.print(PROMPT);
+			System.out.print("MONTH > ");
 			month = scanner.nextInt();
 
 			if (month < 1) {
@@ -25,7 +29,7 @@ public class Prompt {
 				System.out.println("12 이하의 숫자만 입력하세요. ");
 				continue; 			// continue는 처음으로 되돌아간다.		
 			}
-				cal.printCalendar(2021, month);
+				cal.printCalendar(year, month);
 				System.out.println();
 				System.out.println();
 				System.out.println();
