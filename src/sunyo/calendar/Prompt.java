@@ -38,6 +38,8 @@ public class Prompt {
 				System.out.println();
 				System.out.println();
 				System.out.println();
+				System.out.println();
+				System.out.println();
 
 		}
 		System.out.println("bye~");
