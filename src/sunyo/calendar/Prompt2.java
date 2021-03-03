@@ -2,7 +2,7 @@ package sunyo.calendar;
 
 import java.util.Scanner;
 
-public class Prompt {
+public class Prompt2 {
 
 	public int parseDay(String str_weekday) {
 		if (str_weekday.equals("su"))
@@ -62,7 +62,7 @@ public class Prompt {
 	}
 
 	public static void main(String[] args) {
-		Prompt p = new Prompt();
+		Prompt2 p = new Prompt2();
 		p.runPrompt();
 
 	}
