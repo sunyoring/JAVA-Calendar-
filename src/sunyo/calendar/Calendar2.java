@@ -20,6 +20,8 @@ public class Calendar2 {
 		}
 	}
 
+	
+	// Calendar1 project처럼 첫 요일을 입력받을 필요 없이 정밀한 달력을 출력할 수 있다.
 	public int getWeek(int year, int month, int day) {
 		int sYear = 1970;
 		int sWeek = 4;
@@ -73,19 +75,5 @@ public class Calendar2 {
 	public static void main(String[] args) {
 	}
 }
-
-// 숫자를 입력받아 해당하는 달의 최대 일수를 출력하는 프로그램
-
-//		Scanner scanner = new Scanner(System.in);
-//		System.out.println("반복횟수를 입력하세요");
-//		int repeat = scanner.nextInt();
-
-//		for (int i=0; i < repeat; i++) {
-//			System.out.println("달을 입력하세요");
-//			System.out.print(PROMPT);
-//			int month = scanner.nextInt();
-//			System.out.printf("%d월은 %d일까지 있습니다.\n", month, cal.getMaxDaysOfMonth(month));
-//		}
-//		System.out.println("END.");
-//		
+		
 // while(true)는 무한루프
