@@ -21,9 +21,8 @@ public class Prompt2 {
 		Scanner scanner = new Scanner(System.in);
 		Calendar2 cal = new Calendar2();
 
-		
 		// if-else-if로 구현
-		
+
 //		while (true) {
 //			String cmd = scanner.next();
 //			if (cmd.equals("1"))
@@ -39,7 +38,7 @@ public class Prompt2 {
 //		}
 
 		// switch-case로 구현
-		boolean isLoop = true;		
+		boolean isLoop = true;
 		while (isLoop) {
 			String cmd = scanner.next();
 			switch (cmd) {
@@ -101,8 +100,14 @@ public class Prompt2 {
 		System.out.println("[일정 검색]");
 		System.out.println("날짜를 입력해 주세요. (YYYY-MM-DD)");
 		String date = s.next();
-		String plan = c.searchPlan(date);
-		System.out.println(plan);
+		PlanItem plan;
+		plan = c.searchPlan(date);
+
+		if (plan != null) {
+			System.out.println(plan.detail);
+		} else {
+			System.out.println("일정이 없습니다. ");
+		}
 
 	}
 
