@@ -44,7 +44,12 @@ public class Calendar2 {
 	}
 
 	public void printCalendar(int year, int month, int weekday) {
+		System.out.println();
+		
 		System.out.printf("   << %4d년%3d월 >>\n", year, month);
+		
+		System.out.println();
+		System.out.println("----------------------");
 		System.out.println(" SU MO TU WE TH FR SA ");
 		System.out.println("----------------------");
 
@@ -68,10 +73,15 @@ public class Calendar2 {
 
 			if (j % 7 == deli) {
 				System.out.println();
+			
 			}
+			
 		}
+		System.out.println();
+		System.out.println("----------------------");		
+		System.out.println();
 	}
-
+	
 	public static void main(String[] args) {
 	}
 }
