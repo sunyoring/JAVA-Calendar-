@@ -10,30 +10,31 @@ public class Calendar2 {
 	private static final int[] maxDays = { 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31 };
 	private static final int[] LEAPmaxDays = { 31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31 };
 
-	private HashMap <Date, String> planMap;
-	
-	public Calendar2 () {
+	private HashMap<Date, String> planMap;
+
+	public Calendar2() {
 		planMap = new HashMap<Date, String>();
 	}
-	
+
 	/**
 	 * 
 	 * @param date ex : "2021-03-04"
 	 * @param plan
-	 * @throws ParseException 
+	 * @throws ParseException
 	 */
 	public void registerPlan(String strDate, String plan) throws ParseException {
-		
+
 		Date date = new SimpleDateFormat("yyyy-MM-dd").parse(strDate);
 		planMap.put(date, plan);
-		
+
 	}
+
 	public String searchPlan(String strDate) throws ParseException {
 		Date date = new SimpleDateFormat("yyyy-MM-dd").parse(strDate);
 		String plan = planMap.get(date);
 		return plan;
 	}
-	
+
 	public static boolean isLeapYear(int year) {
 		if ((year % 4 == 0) && (year % 100 != 0 || year % 400 == 0))
 			return true;
@@ -49,7 +50,6 @@ public class Calendar2 {
 		}
 	}
 
-	
 	// Calendar1 project처럼 첫 요일을 입력받을 필요 없이 정밀한 달력을 출력할 수 있다.
 	public int getWeek(int year, int month, int day) {
 		int sYear = 1970;
@@ -74,9 +74,9 @@ public class Calendar2 {
 
 	public void printCalendar(int year, int month, int weekday) {
 		System.out.println();
-		
+
 		System.out.printf("   << %4d년%3d월 >>\n", year, month);
-		
+
 		System.out.println();
 		System.out.println("----------------------");
 		System.out.println(" SU MO TU WE TH FR SA ");
@@ -102,21 +102,15 @@ public class Calendar2 {
 
 			if (j % 7 == deli) {
 				System.out.println();
-			
+
 			}
-			
+
 		}
 		System.out.println();
-		System.out.println("----------------------");		
+		System.out.println("----------------------");
 		System.out.println();
 	}
-	
-	public static void main(String[] args) throws ParseException {
-		
-	 Calendar2 cal = new Calendar2();
-	 cal.registerPlan("2021-03-04", "My Birthday !");
-	 System.out.println(cal.searchPlan("2021-03-04").equals("My Birthday !"));
-	}
+
 }
-		
+
 // while(true)는 무한루프

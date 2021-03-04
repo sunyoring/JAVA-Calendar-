@@ -21,19 +21,44 @@ public class Prompt2 {
 		Scanner scanner = new Scanner(System.in);
 		Calendar2 cal = new Calendar2();
 
-		while (true) {
-			
+		
+		// if-else-if로 구현
+		
+//		while (true) {
+//			String cmd = scanner.next();
+//			if (cmd.equals("1"))
+//				cmdRegister(scanner, cal);
+//			else if (cmd.equals("2"))
+//				cmdSearch(scanner, cal);
+//			else if (cmd.equals("3"))
+//				cmdCal(scanner, cal);
+//			else if (cmd.equals("h"))
+//				printMenu();
+//			else if (cmd.equals("q"))
+//				break;
+//		}
+
+		// switch-case로 구현
+		boolean isLoop = true;		
+		while (isLoop) {
 			String cmd = scanner.next();
-			if (cmd.equals("1"))
+			switch (cmd) {
+			case "1":
 				cmdRegister(scanner, cal);
-			else if (cmd.equals("2"))
-				cmdSearch(scanner, cal);
-			else if (cmd.equals("3"))
-				cmdCal(scanner, cal);
-			else if (cmd.equals("h"))
-				printMenu();
-			else if (cmd.equals("q"))
 				break;
+			case "2":
+				cmdSearch(scanner, cal);
+				break;
+			case "3":
+				cmdCal(scanner, cal);
+				break;
+			case "h":
+				printMenu();
+				break;
+			case "q":
+				isLoop = false;
+				break;
+			}
 		}
 
 		System.out.println("Thank you. Bye~");
@@ -61,7 +86,6 @@ public class Prompt2 {
 
 	}
 
-	
 	private void cmdRegister(Scanner s, Calendar2 c) throws ParseException {
 		System.out.println("[새 일정 등록]");
 		System.out.println("날짜를 입력해 주세요. (YYYY-MM-DD)");
@@ -72,7 +96,7 @@ public class Prompt2 {
 		c.registerPlan(date, text);
 
 	}
-	
+
 	private void cmdSearch(Scanner s, Calendar2 c) throws ParseException {
 		System.out.println("[일정 검색]");
 		System.out.println("날짜를 입력해 주세요. (YYYY-MM-DD)");
@@ -81,8 +105,6 @@ public class Prompt2 {
 		System.out.println(plan);
 
 	}
-
-
 
 	public static void main(String[] args) throws ParseException {
 		Prompt2 p = new Prompt2();
