@@ -90,7 +90,7 @@ public class Prompt2 {
 		System.out.println("날짜를 입력해 주세요. (YYYY-MM-DD)");
 		String date = s.next();
 		s.nextLine();
-		System.out.println("일정을"+ "입력해 주세요.");
+		System.out.println("일정을입력해 주세요.");
 		String text = s.nextLine();
 		c.registerPlan(date, text);
 
