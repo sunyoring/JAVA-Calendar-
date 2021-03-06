@@ -6,12 +6,12 @@ import java.util.Scanner;
 public class Prompt2 {
 
 	public void printMenu() {
-		System.out.println("+----------------+");
-		System.out.println("| 1 . 일정 등록    |");
-		System.out.println("| 2 . 일정 검색    |");
-		System.out.println("| 3 . 달력 보기    |");
-		System.out.println("| 4 .  q, 종료    |");
-		System.out.println("+----------------+");
+		System.out.println("+--------------------+");
+		System.out.println("| 1 . 일정 등록        |");
+		System.out.println("| 2 . 일정 검색        |");
+		System.out.println("| 3 . 달력 보기        |");
+		System.out.println("| 4 . h, 도움말 q, 끝. |");
+		System.out.println("+--------------------+");
 		System.out.println("명령(1, 2, 3, h, q)");
 	}
 

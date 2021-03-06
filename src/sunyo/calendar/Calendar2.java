@@ -9,8 +9,9 @@ public class Calendar2 {
 	private static final int[] maxDays = { 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31 };
 	private static final int[] LEAPmaxDays = { 31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31 };
 
-	private HashMap<Date, PlanItem> planMap;
+	//private HashMap<Date, PlanItem> planMap;
 
+	private HashMap<Date, PlanItem> planMap;
 	public Calendar2() {
 		planMap = new HashMap<Date, PlanItem>();
 	
